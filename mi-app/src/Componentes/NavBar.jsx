@@ -1,24 +1,50 @@
-import CartWidget from "./CartWidget";
-import './Navbar.css';
+import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget';
+import logo from '../assets/PLogo.png';
 
-function Navbar() {
+function NavBar() {
   return (
-    <div className="navbar">
-      <div className="navbar-left">
-        <img src="/Plogo.png" alt="PremierShop Logo" className="logo" />
+    <nav style={styles.nav}>
+      <Link to="/" style={styles.logo}>
+        <img src={logo} alt="Logo" style={{ height: '40px' }} />
+      </Link>
+
+      <div style={styles.links}>
+        <Link to="/category/camisetas" style={styles.link}>Camisetas</Link>
+        <Link to="/category/entradas" style={styles.link}>Entradas</Link>
       </div>
 
-      <div className="navbar-center">
-        <p>Camisetas</p>
-        <p>Buzos</p>
-        <p>Entradas</p>
-      </div>
-
-      <div className="navbar-right">
+      <div style={styles.cart}>
         <CartWidget />
       </div>
-    </div>
+    </nav>
   );
 }
 
-export default Navbar;
+const styles = {
+  nav: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '10px 20px',
+    backgroundColor: '#00264d', // Azul oscuro
+    borderBottom: '1px solid #ddd',
+  },
+  logo: {
+    textDecoration: 'none',
+  },
+  links: {
+    display: 'flex',
+    gap: '20px',
+  },
+  link: {
+    textDecoration: 'none',
+    color: 'white', // Blanco
+    fontWeight: 'bold',
+  },
+  cart: {
+    position: 'relative',
+  },
+};
+
+export default NavBar;

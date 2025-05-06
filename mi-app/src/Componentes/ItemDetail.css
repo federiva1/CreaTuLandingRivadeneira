@@ -1,0 +1,35 @@
+.item-detail-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: white;
+  }
+  
+  .item-detail-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .item-detail-card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .item-detail-card p {
+    margin: 10px 0;
+  }
+  
+  .item-detail-card button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
